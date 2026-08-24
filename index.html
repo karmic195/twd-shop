@@ -261,123 +261,77 @@
 }
 </style>
 <style id="daryl-dixon-redesign">
+@import url("https://db.onlinewebfonts.com/c/a91fa004cd0cfd612ca1dacaf9f8cbf0?family=Dead+Kansas");
 :root{
-  --bg:#090a0a;
-  --bg-alt:#151819;
-  --paper:#171a1b;
-  --ink:#e7e9e8;
-  --ink-dark:#0b0d0d;
-  --amber:#7f9295;
-  --magenta:#2c3d42;
-  --line:rgba(210,220,220,.16);
-  --steel:#aab7b9;
+  --bg:#171817;--bg2:#222322;--card:#292a28;--ink:#eee9df;--muted:#b8b2a8;
+  --steel:#8f9a98;--rust:#6f4e3c;--line:rgba(235,228,214,.18);
 }
 body{
   background:
-    radial-gradient(circle at 50% 0%,rgba(91,112,117,.12),transparent 34%),
-    linear-gradient(rgba(7,8,8,.92),rgba(7,8,8,.97)),
-    repeating-linear-gradient(135deg,rgba(255,255,255,.018) 0 1px,transparent 1px 7px),
+    radial-gradient(ellipse at 50% 0%,rgba(121,109,91,.20),transparent 48%),
+    linear-gradient(rgba(24,25,23,.78),rgba(16,17,16,.94)),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 5px),
     var(--bg);
   color:var(--ink);
-  font-family:'Work Sans',sans-serif;
 }
 header.hero{
-  padding:6rem 1.5rem 4.5rem;
+  position:relative;overflow:hidden;
+  padding:6rem 1.5rem 5rem;
   background:
-    linear-gradient(180deg,rgba(5,6,6,.55),rgba(5,6,6,.96)),
-    radial-gradient(ellipse at center top,rgba(113,137,142,.18),transparent 58%),
-    var(--bg);
-  border-bottom:1px solid rgba(170,183,185,.22);
-  box-shadow:0 12px 45px rgba(0,0,0,.45);
-  overflow:hidden;
+    linear-gradient(90deg,rgba(16,17,16,.55),rgba(45,42,37,.20),rgba(16,17,16,.62)),
+    radial-gradient(ellipse at 50% 35%,rgba(154,136,107,.18),transparent 58%),
+    #272825;
+  border-bottom:1px solid var(--line);
+  box-shadow:0 12px 45px rgba(0,0,0,.35);
 }
-header.hero::before{
-  content:"DARYL DIXON";
-  position:absolute;left:50%;top:18px;transform:translateX(-50%);
-  font-family:'Anton',sans-serif;font-size:clamp(3.5rem,14vw,10rem);
-  letter-spacing:.12em;color:rgba(255,255,255,.018);
-  white-space:nowrap;pointer-events:none;
+header.hero:after{
+  content:"";
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    linear-gradient(105deg,transparent 0 48%,rgba(0,0,0,.16) 49%,transparent 50%),
+    repeating-linear-gradient(115deg,transparent 0 55px,rgba(255,255,255,.018) 56px,transparent 58px);
 }
-.eyebrow{
-  color:#a9b8ba;
-  letter-spacing:.28em;
-  text-shadow:0 1px 8px #000;
-}
+.eyebrow{position:relative;z-index:1;color:#c2b7a4;letter-spacing:.28em;}
 h1{
-  font-size:clamp(3.4rem,10vw,7rem);
-  letter-spacing:.08em;
-  text-shadow:4px 4px 0 #26353a,8px 8px 24px rgba(0,0,0,.7);
+  position:relative;z-index:1;
+  font-family:"Dead Kansas",Impact,sans-serif;
+  font-weight:400;
+  font-size:clamp(4rem,11vw,8rem);
+  letter-spacing:.045em;
+  color:#eee9df;
+  text-shadow:3px 4px 0 rgba(54,48,40,.75),0 8px 28px rgba(0,0,0,.42);
 }
-header.hero p{color:rgba(231,233,232,.7);}
-nav.tabs{padding-top:2.2rem;}
+header.hero p{position:relative;z-index:1;color:#d1ccc2;max-width:720px;}
+nav.tabs{position:relative;z-index:2;padding-top:2.2rem;}
 nav.tabs button{
-  border-radius:3px;
-  border:1px solid rgba(170,183,185,.25);
-  background:#101314;
-  color:#c9d0d1;
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.025),0 5px 18px rgba(0,0,0,.3);
+  border-radius:2px;border:1px solid rgba(231,224,209,.22);
+  background:rgba(31,32,30,.84);color:#d8d1c5;
 }
 nav.tabs button.active,nav.tabs button:hover{
-  background:#56686d;
-  color:#080a0a;
-  border-color:#829397;
+  background:#8b8374;color:#171817;border-color:#b3a894;
 }
 main{gap:2rem;padding-top:3rem;}
 .card{
-  background:
-    linear-gradient(145deg,rgba(255,255,255,.035),transparent 38%),
-    #151819;
-  color:#e4e7e7;
-  border:1px solid rgba(170,183,185,.16);
-  border-radius:4px;
-  box-shadow:0 18px 40px rgba(0,0,0,.58),inset 0 0 0 1px rgba(255,255,255,.018);
+  background:linear-gradient(145deg,rgba(255,255,255,.055),transparent 45%),#292a28;
+  color:var(--ink);border:1px solid var(--line);border-radius:3px;
+  box-shadow:0 16px 34px rgba(0,0,0,.32);
   transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
 }
-.card:hover{
-  transform:translateY(-5px) rotate(-.25deg);
-  border-color:rgba(170,183,185,.34);
-  box-shadow:0 24px 50px rgba(0,0,0,.72),0 0 0 1px rgba(120,145,150,.06);
-}
-.card .badge{
-  background:#252f32;
-  color:#dce3e4;
-  border:1px solid rgba(190,205,207,.18);
-  border-radius:2px;
-}
-.card img{
-  background:#0d0f10;
-  padding:.8rem;
-  filter:grayscale(.15) saturate(.7) contrast(1.08);
-}
-.stub-cut{
-  background:#090a0a;
-}
-.stub-cut::after{border-top-color:#384246;}
+.card:hover{transform:translateY(-5px) rotate(-.2deg);border-color:rgba(211,197,174,.38);box-shadow:0 22px 42px rgba(0,0,0,.43);}
+.card img{background:#1d1e1c;padding:.75rem;filter:sepia(.10) saturate(.78) contrast(1.05);}
+.card .badge{background:#3b3b37;color:#ddd5c8;border:1px solid rgba(220,210,194,.18);border-radius:2px;}
 .card-body{padding:1.2rem 1.25rem 1.35rem;}
-.card-body .series{color:#9eafb2;}
-.card-body h3{color:#f0f2f2;letter-spacing:.035em;}
-.card-body .desc{color:#aeb6b7;}
-.price-row .price{color:#e1e6e6;}
-.stock{color:#7e898b;}
-.whatsapp-btn{
-  background:#253337;
-  color:#e7eeee;
-  border:1px solid #4c6065;
-  border-radius:3px;
-  box-shadow:0 5px 14px rgba(0,0,0,.25);
-}
-.whatsapp-btn:hover{background:#40565b;filter:none;}
-footer{
-  color:rgba(231,233,232,.42);
-  border-top:1px solid rgba(170,183,185,.14);
-  background:#080909;
-}
-.gallery-modal{background:rgba(2,3,3,.96);}
-.gallery-btn{background:rgba(15,18,19,.88);border:1px solid rgba(190,205,207,.18);}
-@media(max-width:700px){
-  header.hero{padding:4rem 1rem 3rem;}
-  header.hero::before{font-size:3.8rem;top:10px;}
-}
+.card-body .series{color:#aaa295;}
+.card-body h3{color:#f0ebe2;}
+.card-body .desc{color:#bdb7ad;}
+.price-row .price{color:#e7dfd2;}
+.stock{color:#a9a398;}
+.whatsapp-btn{background:#35413d;color:#eee9df;border:1px solid #64736d;border-radius:3px;}
+.whatsapp-btn:hover{background:#4c5d56;filter:none;}
+footer{color:rgba(231,225,214,.48);border-top:1px solid var(--line);background:#151614;}
+.gallery-modal{background:rgba(14,15,14,.95);}
+.gallery-btn{background:rgba(39,40,38,.92);border:1px solid rgba(230,220,202,.2);}
+@media(max-width:700px){header.hero{padding:4.5rem 1rem 3.5rem;}h1{font-size:4rem;}}
 </style>
 </head>
 <body>
