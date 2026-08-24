@@ -260,6 +260,125 @@
   object-fit:contain;
 }
 </style>
+<style id="daryl-dixon-redesign">
+:root{
+  --bg:#090a0a;
+  --bg-alt:#151819;
+  --paper:#171a1b;
+  --ink:#e7e9e8;
+  --ink-dark:#0b0d0d;
+  --amber:#7f9295;
+  --magenta:#2c3d42;
+  --line:rgba(210,220,220,.16);
+  --steel:#aab7b9;
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(91,112,117,.12),transparent 34%),
+    linear-gradient(rgba(7,8,8,.92),rgba(7,8,8,.97)),
+    repeating-linear-gradient(135deg,rgba(255,255,255,.018) 0 1px,transparent 1px 7px),
+    var(--bg);
+  color:var(--ink);
+  font-family:'Work Sans',sans-serif;
+}
+header.hero{
+  padding:6rem 1.5rem 4.5rem;
+  background:
+    linear-gradient(180deg,rgba(5,6,6,.55),rgba(5,6,6,.96)),
+    radial-gradient(ellipse at center top,rgba(113,137,142,.18),transparent 58%),
+    var(--bg);
+  border-bottom:1px solid rgba(170,183,185,.22);
+  box-shadow:0 12px 45px rgba(0,0,0,.45);
+  overflow:hidden;
+}
+header.hero::before{
+  content:"DARYL DIXON";
+  position:absolute;left:50%;top:18px;transform:translateX(-50%);
+  font-family:'Anton',sans-serif;font-size:clamp(3.5rem,14vw,10rem);
+  letter-spacing:.12em;color:rgba(255,255,255,.018);
+  white-space:nowrap;pointer-events:none;
+}
+.eyebrow{
+  color:#a9b8ba;
+  letter-spacing:.28em;
+  text-shadow:0 1px 8px #000;
+}
+h1{
+  font-size:clamp(3.4rem,10vw,7rem);
+  letter-spacing:.08em;
+  text-shadow:4px 4px 0 #26353a,8px 8px 24px rgba(0,0,0,.7);
+}
+header.hero p{color:rgba(231,233,232,.7);}
+nav.tabs{padding-top:2.2rem;}
+nav.tabs button{
+  border-radius:3px;
+  border:1px solid rgba(170,183,185,.25);
+  background:#101314;
+  color:#c9d0d1;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.025),0 5px 18px rgba(0,0,0,.3);
+}
+nav.tabs button.active,nav.tabs button:hover{
+  background:#56686d;
+  color:#080a0a;
+  border-color:#829397;
+}
+main{gap:2rem;padding-top:3rem;}
+.card{
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.035),transparent 38%),
+    #151819;
+  color:#e4e7e7;
+  border:1px solid rgba(170,183,185,.16);
+  border-radius:4px;
+  box-shadow:0 18px 40px rgba(0,0,0,.58),inset 0 0 0 1px rgba(255,255,255,.018);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.card:hover{
+  transform:translateY(-5px) rotate(-.25deg);
+  border-color:rgba(170,183,185,.34);
+  box-shadow:0 24px 50px rgba(0,0,0,.72),0 0 0 1px rgba(120,145,150,.06);
+}
+.card .badge{
+  background:#252f32;
+  color:#dce3e4;
+  border:1px solid rgba(190,205,207,.18);
+  border-radius:2px;
+}
+.card img{
+  background:#0d0f10;
+  padding:.8rem;
+  filter:grayscale(.15) saturate(.7) contrast(1.08);
+}
+.stub-cut{
+  background:#090a0a;
+}
+.stub-cut::after{border-top-color:#384246;}
+.card-body{padding:1.2rem 1.25rem 1.35rem;}
+.card-body .series{color:#9eafb2;}
+.card-body h3{color:#f0f2f2;letter-spacing:.035em;}
+.card-body .desc{color:#aeb6b7;}
+.price-row .price{color:#e1e6e6;}
+.stock{color:#7e898b;}
+.whatsapp-btn{
+  background:#253337;
+  color:#e7eeee;
+  border:1px solid #4c6065;
+  border-radius:3px;
+  box-shadow:0 5px 14px rgba(0,0,0,.25);
+}
+.whatsapp-btn:hover{background:#40565b;filter:none;}
+footer{
+  color:rgba(231,233,232,.42);
+  border-top:1px solid rgba(170,183,185,.14);
+  background:#080909;
+}
+.gallery-modal{background:rgba(2,3,3,.96);}
+.gallery-btn{background:rgba(15,18,19,.88);border:1px solid rgba(190,205,207,.18);}
+@media(max-width:700px){
+  header.hero{padding:4rem 1rem 3rem;}
+  header.hero::before{font-size:3.8rem;top:10px;}
+}
+</style>
 </head>
 <body>
 <div class="scanlines"></div>
@@ -267,7 +386,7 @@
 <header class="hero">
   <div class="eyebrow">THE WALKING DEAD · DARYL DIXON · ÉDITION LIMITÉE</div>
   <h1>TWD SHOP</h1>
-  <p>Vêtements et objets inspirés de <strong>The Walking Dead</strong>. Paiement 100% sécurisé par PayPal, envoi sous 3 à 5 jours.</p>
+  <p>Vêtements et objets inspirés de <strong>The Walking Dead</strong>. Pièces et objets inspirés de l'univers de The Walking Dead. Commandes et contact via WhatsApp.</p>
 </header>
 
 <nav class="tabs" id="tabs">
