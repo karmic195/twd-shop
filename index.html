@@ -189,6 +189,10 @@
   }
   .whatsapp-btn:hover{filter:brightness(1.08);transform:translateY(-1px);}
   .whatsapp-btn:active{transform:translateY(0);}
+  .product-image.show-second{
+    object-fit:contain !important;
+    background:#c8c2b5;
+  }
   .product-image-large{
     aspect-ratio:1 / 1.35 !important;
     object-fit:contain !important;
@@ -424,9 +428,11 @@ function render(filter){
         secondImage.src = p.secondImg;
         productImage.addEventListener("mouseenter", () => {
           productImage.src = p.secondImg;
+          productImage.classList.add("show-second");
         });
         productImage.addEventListener("mouseleave", () => {
           productImage.src = p.img;
+          productImage.classList.remove("show-second");
         });
       }
     });
