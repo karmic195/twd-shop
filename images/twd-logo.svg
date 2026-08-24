@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+<rect width="1000" height="1000" fill="#fff"/>
+<circle cx="500" cy="500" r="410" fill="#000"/>
+<g fill="none" stroke="#d51f1f" stroke-width="34" stroke-linecap="round">
+<path d="M270 260 L735 750"/>
+<path d="M730 260 L265 750"/>
+</g>
+<g fill="#d51f1f" font-family="Impact,Arial Black,sans-serif" font-weight="900" text-anchor="middle">
+<text x="500" y="405" font-size="190">TWD</text>
+</g>
+<rect x="435" y="650" width="130" height="72" fill="#d51f1f"/>
+<text x="500" y="700" fill="#111" font-family="Arial,sans-serif" font-weight="700" font-size="48" text-anchor="middle">amc</text>
+<text x="500" y="760" fill="#d51f1f" font-family="Arial,sans-serif" font-size="22" text-anchor="middle">© 2019 AMC</text>
+</svg>
