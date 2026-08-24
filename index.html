@@ -415,6 +415,20 @@ function render(filter){
         </div>
       `;
       grid.appendChild(card);
+
+      // Sur ordinateur uniquement : afficher la 2e photo au survol.
+      // Aucun changement sur téléphone/tablette.
+      if (p.secondImg && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        const productImage = card.querySelector(".product-image");
+        const secondImage = new Image();
+        secondImage.src = p.secondImg;
+        productImage.addEventListener("mouseenter", () => {
+          productImage.src = p.secondImg;
+        });
+        productImage.addEventListener("mouseleave", () => {
+          productImage.src = p.img;
+        });
+      }
     });
 }
 render("tous");
